@@ -11,7 +11,7 @@ import Marquee from "react-fast-marquee";
 
 const ClientReview = () => {
     return (
-        <div className=' grayscale hover:grayscale-0  absolute z-50 top-[660px]   left-1/12 right-1/12 mb-20 '>
+        <div className=' grayscale hover:grayscale-0  absolute z-50 top-[670px]   left-1/12 right-1/12 mb-20 '>
 
         <div className='w-full container mx-auto py-7  my-20 bg-white/40 border border-white/60 rounded-md'>
             <h2 className='text-center text-3xl font-bold pb-2'>Client Review</h2>
