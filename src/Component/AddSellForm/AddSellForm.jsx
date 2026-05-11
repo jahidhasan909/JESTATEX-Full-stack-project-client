@@ -6,31 +6,66 @@ import { FaWpforms } from "react-icons/fa6";
 
 const AddSellForm = () => {
     const formRef = useRef();
-    const onSubmit=(e)=>{
-         e.preventDefault();
+    const onSubmit = (e) => {
+        e.preventDefault();
     }
     return (
-        <div className='mt-40'>
-            <Card className=' rounded-md shadow-md border border-white/20 max-w-7xl mx-auto'>
+        <div className='mt-36 max-w-7xl mx-auto'>
+            <h1 className='font-bold text-3xl mt-2 pb-5'>Showcase Your Premium Property</h1>
+            <Card className=' rounded-md shadow-md border border-white/20 max-w-6xl mx-auto'>
                 <form
                     ref={formRef}
                     onSubmit={onSubmit}
                     className="p-10 space-y-8 "
                 >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* Destination Name */}
-                        <div className="md:col-span-2">
-                            <TextField name="destinationName" isRequired>
-                                <Label>Destination Name</Label>
-                                <Input placeholder="Bali Paradise" className="rounded-md" />
+                        {/* Name */}
+                        <div className="md:col-span-2 grid grid-cols-2 gap-5">
+                            <TextField name="name" isRequired>
+                                <Label>Name</Label>
+                                <Input placeholder="Enter Your Name" className="rounded-md" />
                                 <FieldError />
                             </TextField>
+                            <TextField name="email" isRequired>
+                                <Label>Email</Label>
+                                <Input placeholder="Enter Your Email" className="rounded-md" />
+                                <FieldError />
+                            </TextField>
+
+                            <TextField name="number" isRequired>
+                                <Label>Phone Number</Label>
+                                <Input placeholder="Enter Your Phone Number" className="rounded-md" />
+                                <FieldError />
+                            </TextField>
+
+                            {/* Image URL - Removed preview */}
+                            
+                                <TextField name="imageUrlsellar" isRequired>
+                                    <Label>Image URL</Label>
+                                    <Input
+                                        type="url"
+                                        placeholder="https://example.com/your-paradise.jpg"
+                                        className="rounded-md"
+                                    />
+                                    <FieldError />
+                                </TextField>
+                            
+
                         </div>
 
+                        <div className='md:col-span-2'>
+
+                            <TextField name="propertytitle" isRequired>
+                                <Label>Property Title</Label>
+                                <Input placeholder="Enter Property Title" className="rounded-md" />
+                                <FieldError />
+                            </TextField>
+
+                        </div>
                         {/* Country */}
-                        <TextField name="country" isRequired>
-                            <Label>Country</Label>
-                            <Input placeholder="Indonesia" className="rounded-md" />
+                        <TextField name="location" isRequired>
+                            <Label>Location</Label>
+                            <Input placeholder="Property Location" className="rounded-md" />
                             <FieldError />
                         </TextField>
 
@@ -42,35 +77,31 @@ const AddSellForm = () => {
                                 className="w-full"
                                 placeholder="Select category"
                             >
-                                <Label>Category</Label>
+                                <Label>Property Type</Label>
                                 <Select.Trigger className="rounded-md">
                                     <Select.Value />
                                     <Select.Indicator />
                                 </Select.Trigger>
                                 <Select.Popover>
                                     <ListBox>
-                                        <ListBox.Item id="Beach" textValue="Beach">
-                                            Beach
+                                        <ListBox.Item id="apartment" textValue="Apartment">
+                                            Apartment
                                             <ListBox.ItemIndicator />
                                         </ListBox.Item>
-                                        <ListBox.Item id="Mountain" textValue="Mountain">
-                                            Mountain
+                                        <ListBox.Item id="house" textValue="House">
+                                            House
                                             <ListBox.ItemIndicator />
                                         </ListBox.Item>
-                                        <ListBox.Item id="City" textValue="City">
-                                            City
+                                        <ListBox.Item id="land" textValue="Land">
+                                            Land
                                             <ListBox.ItemIndicator />
                                         </ListBox.Item>
-                                        <ListBox.Item id="Adventure" textValue="Adventure">
-                                            Adventure
+                                        <ListBox.Item id="office" textValue="Office">
+                                            Office
                                             <ListBox.ItemIndicator />
                                         </ListBox.Item>
-                                        <ListBox.Item id="Cultural" textValue="Cultural">
-                                            Cultural
-                                            <ListBox.ItemIndicator />
-                                        </ListBox.Item>
-                                        <ListBox.Item id="Luxury" textValue="Luxury">
-                                            Luxury
+                                        <ListBox.Item id="palace" textValue="Palace">
+                                            Palace
                                             <ListBox.ItemIndicator />
                                         </ListBox.Item>
                                     </ListBox>
@@ -90,10 +121,10 @@ const AddSellForm = () => {
                         </TextField>
 
                         {/* Duration */}
-                        <TextField name="duration" isRequired>
-                            <Label>Duration</Label>
+                        <TextField name="areasize" isRequired>
+                            <Label>Area Size (sqft)</Label>
                             <Input
-                                placeholder="7 Days / 6 Nights"
+                                placeholder="120(sqft)"
                                 className="rounded-md"
                             />
                             <FieldError />
@@ -126,7 +157,7 @@ const AddSellForm = () => {
                             <TextField name="description" isRequired>
                                 <Label>Description</Label>
                                 <TextArea
-                                    placeholder="Describe the travel experience..."
+                                    placeholder="Describe..."
                                     className="rounded-md"
                                 />
                                 <FieldError />
@@ -148,10 +179,10 @@ const AddSellForm = () => {
                             type="submit"
                             variant="outline"
 
-                            className=" rounded-md bg-cyan-500 text-white"
+                            className=" rounded-md bg-black text-white font-bold"
                         >
                             <FaWpforms />
-                            Add Travel Package
+                            Add Property
                         </Button>
                     </div>
                 </form>
