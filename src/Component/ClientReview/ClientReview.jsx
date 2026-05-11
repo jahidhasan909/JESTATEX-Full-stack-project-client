@@ -11,14 +11,14 @@ import Marquee from "react-fast-marquee";
 
 const ClientReview = () => {
     return (
-        <div className=' grayscale hover:grayscale-0  absolute z-50 top-[670px]   left-1/12 right-1/12 mb-20 '>
+        <div className=' overflow-hidden grayscale hover:grayscale-0  absolute z-50 top-[670px]   left-1/12 right-1/12 '>
 
-        <div className='w-full container mx-auto py-7  my-20 bg-white/40 border border-white/60 rounded-md'>
+        <div className='w-full container mx-auto py-7  my-20 backdrop-blur-3xl bg-white/40 border border-white/60 rounded-md'>
             <h2 className='text-center text-3xl font-bold pb-2'>Client Review</h2>
             <Marquee pauseOnHover={true} speed={100}>
 
                 <div className='flex'>
-                    <div className='w-[300px] bg-white shadow-md rounded-md p-2 space-y-2 mr-3'>
+                    <div className='w-[300px] bg-white/20 border-white/70 border shadow-md rounded-md p-2 space-y-2 mr-3'>
 
                         <div className='flex justify-between'>
                             <GoCodeReview />
@@ -34,7 +34,7 @@ const ClientReview = () => {
 
 
 
-                    <div className='w-[300px] bg-white shadow-md rounded-md p-2 space-y-2 mr-3'>
+                    <div className='w-[300px] bg-white/20 border-white/70 border shadow-md rounded-md p-2 space-y-2 mr-3'>
                         <div className='flex justify-between'>
                             <GoCodeReview />
                         </div>
@@ -49,7 +49,7 @@ const ClientReview = () => {
 
 
 
-                    <div className='w-[300px] bg-white shadow-md rounded-md p-2 space-y-2 mr-3'>
+                    <div className='w-[300px] bg-white/20 border-white/70 border shadow-md rounded-md p-2 space-y-2 mr-3'>
                         <div className='flex justify-between' >
                             <GoCodeReview />
                         </div>
@@ -64,7 +64,7 @@ const ClientReview = () => {
 
 
 
-                    <div className='w-[300px] bg-white shadow-md rounded-md p-2 space-y-2 mr-3'>
+                    <div className='w-[300px] bg-white/20 border-white/70 border shadow-md rounded-md p-2 space-y-2 mr-3'>
                         <div className='flex justify-between'>
                             <GoCodeReview />
                         </div>
@@ -78,7 +78,7 @@ const ClientReview = () => {
                     </div>
 
 
-                    <div className='w-[300px] bg-white shadow-md rounded-md p-2 space-y-2 mr-3'>
+                    <div className='w-[300px] bg-white/20 border-white/70 bordershadow-md rounded-md p-2 space-y-2 mr-3'>
                         <div className='flex justify-between'>
                             <GoCodeReview />
                         </div>
@@ -92,7 +92,7 @@ const ClientReview = () => {
                     </div>
 
 
-                    <div className='w-[300px] bg-white shadow-md rounded-md p-2 space-y-2 mr-3'>
+                    <div className='w-[300px] bg-white/20 border-white/70 border shadow-md rounded-md p-2 space-y-2 mr-3'>
                         <div className='flex justify-between'>
                             <GoCodeReview />
                         </div>

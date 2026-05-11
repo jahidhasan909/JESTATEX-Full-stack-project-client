@@ -17,7 +17,7 @@ const Banner = () => {
                     <span className=' animate-ping'><CircleFill width={6} /></span>
                     <Chip.Label className='font-semibold'>Trusted Real Estate Platform</Chip.Label>
                 </Chip>
-                <h1 className='text-6xl font-extrabold mt-3 leading-tight'>Modern Real <br /> Estate Platform</h1>
+                <h1 className='text-5xl font-extrabold mt-3 leading-tight'>Modern Real <br /> Estate Platform</h1>
                 <div>
                     <TypeAnimation
                         sequence={[
