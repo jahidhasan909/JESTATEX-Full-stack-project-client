@@ -6,8 +6,23 @@ import { FaWpforms } from "react-icons/fa6";
 
 const AddSellForm = () => {
     const formRef = useRef();
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
+        const formData = new FormData(e.currentTarget)
+        const newProperty = Object.fromEntries(formData.entries())
+
+        const res = await fetch('http://localhost:5002/property', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newProperty)
+        })
+
+        const data = await res.json()
+        console.log(data);
+
+
     }
     return (
         <div className='mt-36 max-w-7xl mx-auto'>
@@ -39,17 +54,17 @@ const AddSellForm = () => {
                             </TextField>
 
                             {/* Image URL - Removed preview */}
-                            
-                                <TextField name="imageUrlsellar" isRequired>
-                                    <Label>Image URL</Label>
-                                    <Input
-                                        type="url"
-                                        placeholder="https://example.com/your-paradise.jpg"
-                                        className="rounded-md"
-                                    />
-                                    <FieldError />
-                                </TextField>
-                            
+
+                            <TextField name="imageUrlsellar" isRequired>
+                                <Label>Image URL</Label>
+                                <Input
+                                    type="url"
+                                    placeholder="https://example.com/your-paradise.jpg"
+                                    className="rounded-md"
+                                />
+                                <FieldError />
+                            </TextField>
+
 
                         </div>
 
@@ -133,7 +148,7 @@ const AddSellForm = () => {
                         {/* Departure Date */}
                         <div className="md:col-span-2">
                             <TextField name="departureDate" type="date" isRequired>
-                                <Label>Departure Date</Label>
+                                <Label>Date</Label>
                                 <Input type="date" className="rounded-md" />
                                 <FieldError />
                             </TextField>
