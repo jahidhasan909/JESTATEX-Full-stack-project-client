@@ -4,6 +4,7 @@ import React from 'react';
 import { FaMapLocation } from 'react-icons/fa6';
 import { GoArrowUpLeft } from 'react-icons/go';
 import { PencilToLine, TrashBin } from '@gravity-ui/icons';
+import DeletedModal from '../DeletedModal/DeletedModal';
 
 const PropertyDetailsCard = ({ propertyDetails }) => {
 
@@ -21,7 +22,7 @@ const PropertyDetailsCard = ({ propertyDetails }) => {
                 </Link>
                 <div className='flex items-center gap-2'>
                     <Button variant='outline' className={' rounded-md '}><PencilToLine></PencilToLine> Edit</Button>
-                    <Button variant='outline' className={' rounded-md text-red-400 border-red-400'}><TrashBin></TrashBin> Deleted</Button>
+                    <DeletedModal propertyDetails={propertyDetails}></DeletedModal>
                 </div>
             </div>
             <Card className="bg-white/70 border-white/40 rounded-md" variant="">
